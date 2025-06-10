@@ -1,2 +1,0 @@
-# ScrapHelper
-Projeto da Computação
