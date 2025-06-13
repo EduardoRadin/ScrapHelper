@@ -53,4 +53,4 @@ Este projeto visa otimizar o trabalho em oficinas e centros de assistência téc
 ## 🗃️ Modelo de Dados (ER)
 - Imagem do modelo entidade-relacionamento:
 
-👉 [Ver imagem do Modelo ER](docs/modelo-er.png)
+👉 [Ver imagem do Modelo ER](Docs/Imagens/MER_ScrapHelper.jpeg)
