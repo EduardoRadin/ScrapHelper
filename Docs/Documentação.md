@@ -54,3 +54,6 @@ Este projeto visa otimizar o trabalho em oficinas e centros de assistência téc
 - Imagem do modelo entidade-relacionamento:
 
 👉 [Ver imagem do Modelo ER](Imagens/MER_ScrapHelper.jpeg)
+
+## 📋 Dicionário de Dados
+- [será colocada uma tabela com todos os dados organizados]
