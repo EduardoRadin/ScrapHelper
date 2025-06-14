@@ -4,7 +4,7 @@ O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas,
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 - Cadastro de clientes, técnicos e equipamentos
 - Criação e atualização de ordens de serviço
 - Relatórios por período e por cliente
@@ -12,10 +12,10 @@ O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas,
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 - Banco de dados: PostgreSQL
 
 ---
 
-## ▶️ Como Executar
-[inserir mais tarde
+## Como Executar
+inserir mais tarde
