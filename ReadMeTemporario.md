@@ -13,6 +13,7 @@ O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas,
 ---
 
 ## Tecnologias Utilizadas
+- Back-end: Java
 - Banco de dados: PostgreSQL
 
 ---
