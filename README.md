@@ -49,3 +49,4 @@ O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas,
 ---
 
 Este projeto visa otimizar o trabalho em oficinas e centros de assistência técnica, garantindo mais controle, agilidade e segurança na prestação de serviços.
+
