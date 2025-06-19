@@ -1,8 +1,4 @@
-# 📦 ScrapHelp – Sistema de Assistência Técnica
-
-O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas, com foco em organização, controle de ordens de serviço e atendimento ao cliente. Desenvolvido para facilitar a rotina de técnicos e administradores, o sistema oferece recursos completos para lidar com o fluxo diário de consertos, equipamentos, relatórios e mais.
-
-## ✅ Requisitos Funcionais
+## Requisitos Funcionais
 
 ### 1. Gestão de Clientes
 - Cadastro de clientes com nome, endereço, telefone, e-mail e NIF.  
@@ -33,20 +29,15 @@ O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas,
 - Sistema de login para técnicos e administradores.  
 - Controle de permissões (ex: técnicos não podem excluir clientes).
 
-## ⚙️ Requisitos Não Funcionais
+## Requisitos Não Funcionais
 
 - Interface intuitiva, responsiva e fácil de usar em diferentes dispositivos.  
 - Sistema com segurança robusta e proteção de dados sensíveis.  
 - Utilização de banco de dados relacional (ex: MySQL, PostgreSQL).  
 - Mecanismos de backup periódicos para garantir integridade dos dados.
 
-## 🧠 Regras de Negócio
+## Regras de Negócio
 
 - Não é possível finalizar uma ordem de serviço sem definir um diagnóstico e uma solução.  
 - Cada cliente pode ter múltiplos equipamentos cadastrados.  
 - Uma ordem de serviço só pode ser atribuída a um técnico por vez.
-
----
-
-Este projeto visa otimizar o trabalho em oficinas e centros de assistência técnica, garantindo mais controle, agilidade e segurança na prestação de serviços.
-
