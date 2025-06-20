@@ -20,5 +20,5 @@ O **ScrapHelp** é um sistema voltado para a gestão de assistências técnicas,
 
 ---
 
-## 📋 Dicionário de Dados
+## Dicionário de Dados
 -> [Dicionario de dados](Docs/DicionarioDeDados.md)
