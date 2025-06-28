@@ -41,7 +41,7 @@
 | OS_ORCAMENTO          | numeric(8, 2) |         | No       | Orçamento da ordem de serviço                |
 | OS_SERVICO_REALIZADO  | varchar(200)  |         | No       | Serviços realizados no equipamento           |
 
-### EQUIPAMENTOS
+### EQUIPAMENTO
 | Column Name        | Data Type     | PK / FK | Nullable | Description                                  |
 |--------------------|---------------|---------|----------|----------------------------------------------|
 | EQP_ID             | int4          | PK      | No       |                                              |
