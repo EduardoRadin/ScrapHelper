@@ -106,7 +106,7 @@ column ENDERECO_PES.END_PES_CELULAR is 'Celular da pessoa';
 comment on
 column ENDERECO_PES.END_PES_EMAIL is 'Email da pessoa';
 
-create table EQUIPAMENTOS (EQP_ID SERIAL not null,
+create table EQUIPAMENTO (EQP_ID SERIAL not null,
 COD_PESSOA int4 not null,
 EQP_TIPO varchar(25) not null,
 EQP_MARCA varchar(25) not null,
@@ -116,19 +116,19 @@ EQP_ESTADO_ENTRADA varchar(50) not null,
 primary key (EQP_ID));
 
 comment on
-column EQUIPAMENTOS.EQP_TIPO is 'Tipo do equipamento';
+column EQUIPAMENTO.EQP_TIPO is 'Tipo do equipamento';
 
 comment on
-column EQUIPAMENTOS.EQP_MARCA is 'Marca do equipamento';
+column EQUIPAMENTO.EQP_MARCA is 'Marca do equipamento';
 
 comment on
-column EQUIPAMENTOS.EQP_MODELO is 'Modelo do equipamento';
+column EQUIPAMENTO.EQP_MODELO is 'Modelo do equipamento';
 
 comment on
-column EQUIPAMENTOS.EQP_NUM_SERIE is 'Número do série do equipamento';
+column EQUIPAMENTO.EQP_NUM_SERIE is 'Número do série do equipamento';
 
 comment on
-column EQUIPAMENTOS.EQP_ESTADO_ENTRADA is 'Descrição do equipamento ao chegar na assistência técnica';
+column EQUIPAMENTO.EQP_ESTADO_ENTRADA is 'Descrição do equipamento ao chegar na assistência técnica';
 
 create table ESTADO (ESTADO_COD SERIAL not null,
 ESTADO_SIGLA varchar(2) not null,
@@ -304,9 +304,9 @@ alter table OS_PECA_UTILIZADA add constraint FKOS_PECA_UT432333 foreign key (PEC
 
 alter table ORDEM_SERVICO add constraint FKORDEM_SERV169302 foreign key (COD_FUN) references FUNCIONARIO (FUN_COD);
 
-alter table ORDEM_SERVICO add constraint FKORDEM_SERV672429 foreign key (COD_EQP) references EQUIPAMENTOS (EQP_ID);
+alter table ORDEM_SERVICO add constraint FKORDEM_SERV672429 foreign key (COD_EQP) references EQUIPAMENTO (EQP_ID);
 
-alter table EQUIPAMENTOS add constraint FKEQUIPAMENT378982 foreign key (COD_PESSOA) references PESSOA (PES_COD);
+alter table EQUIPAMENTO add constraint FKEQUIPAMENT378982 foreign key (COD_PESSOA) references PESSOA (PES_COD);
 
 alter table ENDERECO_PES add constraint FKENDERECO_P945738 foreign key (COD_CEP) references CEP (CEP_COD);
 
