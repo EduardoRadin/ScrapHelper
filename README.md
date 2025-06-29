@@ -12,12 +12,12 @@ Desenhado para simplificar a rotina de **técnicos** 👨‍🔧 e **administrad
 ---
 
 ## ✅ Requisitos  
-🔹 Lista completa disponível em: `Docs/Requisitos.md`
+🔹 Lista completa disponível em: [Requisitos](Docs/Requisitos.md)
 
 ---
 
 ## 🗂️ Modelo de Dados (ER)  
-📷 Imagem do modelo ER disponível em: `Docs/ModeloER.png`
+📷 Imagem do modelo ER disponível em: [Modelo Entidade Relacional](Docs/ModeloER.png)
 
 ---
 
@@ -28,4 +28,9 @@ Desenhado para simplificar a rotina de **técnicos** 👨‍🔧 e **administrad
 ---
 
 ## 📚 Dicionário de Dados  
-📖 Ver em: `Docs/DicionarioDeDados.md`
+📖 Ver em: [Dicionario de Dados](Docs/DicionarioDeDados.md)
+
+---
+
+## 🧱 Criação do Banco de Dados  
+📂 Script de criação das tabelas disponível em: [Script SQL](CriacaoDB.sql)

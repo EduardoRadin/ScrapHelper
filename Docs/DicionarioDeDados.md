@@ -1,10 +1,10 @@
 ## 🧑‍💼 USUARIO
-| 🧾 Column Name     | 🗃️ Data Type | 🔐 PK / FK | ❓ Nullable | 📝 Description              |
-|-------------------|--------------|-----------|------------|-----------------------------|
-| COD_FUNCIONARIO   | int4         | FK        | No         |                             |
-| USU_PERMISSAO     | int4         | FK        | No         |                             |
-| USU_LOGIN         | varchar(50)  |           | No         | Login do funcionário        |
-| USU_SENHA         | varchar(50)  |           | No         | Senha do usuário            |
+| Column Name      | Data Type    | PK / FK | Nullable | Description           |
+|------------------|--------------|---------|----------|-----------------------|
+| COD_FUNCIONARIO  | int4         | FK      | No       |                       |
+| USU_PERMISSAO    | int4         | FK      | No       |                       |
+| USU_LOGIN        | varchar(50)  |         | No       | Login do funcionário  |
+| USU_SENHA        | varchar(50)  |         | No       | Senha do usuário      |
 
 ## 🧩 OS_PECA_UTILIZADA
 | Column Name | Data Type | PK / FK | Nullable | Description                    |
