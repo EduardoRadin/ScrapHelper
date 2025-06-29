@@ -40,3 +40,20 @@
 ### 6️⃣ **Autenticação de Usuários** 🔐  
 - 🔑 Sistema de login para técnicos e administradores.  
 - 🚫 Controle de permissões (ex: técnicos não podem excluir clientes).
+
+---
+
+### 🚀 **Requisitos Não Funcionais**
+
+- 📱 Interface intuitiva, responsiva e fácil de usar em diferentes dispositivos.  
+- 🛡️ Sistema com segurança robusta e proteção de dados sensíveis.  
+- 🗃️ Utilização de banco de dados relacional (ex: MySQL, PostgreSQL).  
+- ♻️ Mecanismos de backup periódicos para garantir integridade dos dados.
+
+---
+
+### 📌 **Regras de Negócio**
+
+- ❗ Não é possível finalizar uma ordem de serviço sem definir um diagnóstico e uma solução.  
+- 🔁 Cada cliente pode ter múltiplos equipamentos cadastrados.  
+- 👨‍🔧 Uma ordem de serviço só pode ser atribuída a um técnico por vez.
