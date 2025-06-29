@@ -12,7 +12,7 @@ column CARGO.CARGO_DESC is 'Descrição da função';
 comment on
 column CARGO.CARGO_SALARIO is 'Salário do funcionário';
 
-create table CEP (CEP_COD SERIAL not null,
+create table CEP (CEP_COD not null,
 COD_MUN int4 not null,
 primary key (CEP_COD));
 
