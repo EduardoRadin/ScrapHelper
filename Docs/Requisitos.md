@@ -3,7 +3,7 @@
 ### 1. Gestão de Clientes
 - Cadastro de clientes com nome, endereço, telefone, e-mail e NIF.  
 - Edição e exclusão de registros de clientes.  
-- Consulta ao histórico de atendimentos de cada cliente.
+- Consulta do histórico de atendimentos de cada cliente.
 
 ### 2. Gestão de Equipamentos
 - Cadastro de equipamentos com informações como tipo, marca, modelo e número de série.  
@@ -17,7 +17,7 @@
 - Geração de orçamentos com base nas informações da ordem.
 
 ### 4. Gestão de Técnicos
-- Cadastro de técnicos.  
+- Cadastro de técnicos;  
 - Atribuição de ordens de serviço a técnicos específicos.
 
 ### 5. Relatórios
@@ -31,7 +31,7 @@
 
 ## Requisitos Não Funcionais
 
-- Interface intuitiva, responsiva e fácil de usar em diferentes dispositivos.  
+- *Interface intuitiva*, *responsiva* e *fácil de usar* em diferentes dispositivos.  
 - Sistema com segurança robusta e proteção de dados sensíveis.  
 - Utilização de banco de dados relacional (ex: MySQL, PostgreSQL).  
 - Mecanismos de backup periódicos para garantir integridade dos dados.
