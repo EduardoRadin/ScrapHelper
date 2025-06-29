@@ -12,7 +12,7 @@ column CARGO.CARGO_DESCRICAO is 'Descrição da função';
 comment on
 column CARGO.CARGO_SALARIO is 'Salário do funcionário';
 
-create table CEP (CEP_COD not null,
+create table CEP (CEP_COD text not null,
 COD_MUN int4 not null,
 primary key (CEP_COD));
 
@@ -25,7 +25,7 @@ column CEP.COD_MUN is 'Código do municipio';
 create table ENDERECO_FUN (END_FUN_ID SERIAL not null,
 COD_FUNCIONARIO int4 not null,
 COD_TIPO_ENDERCO int4 not null,
-COD_CEP int4 not null,
+COD_CEP text not null,
 END_FUN_BAIRRO varchar(50) not null,
 END_FUN_RUA varchar(50) not null,
 END_FUN_NUMERO numeric(6, 0) not null,
@@ -67,7 +67,7 @@ column ENDERECO_FUN.END_FUN_EMAIL is 'Email do funcionário';
 create table ENDERECO_PES (END_PES_ID SERIAL not null,
 COD_PESSOA int4 not null,
 COD_TIPO_ENDERECO int4 not null,
-COD_CEP int4 not null,
+COD_CEP text not null,
 END_PES_BAIRRO varchar(50) not null,
 END_PES_RUA varchar(50) not null,
 END_PES_NUMERO numeric(6, 0) not null,
