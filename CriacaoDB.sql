@@ -1,5 +1,5 @@
 create table CARGO (CARGO_COD SERIAL not null,
-CARGO_DESC varchar(50) not null,
+CARGO_DESCRICAO varchar(50) not null,
 CARGO_SALARIO numeric(8, 2) not null,
 primary key (CARGO_COD));
 
@@ -7,7 +7,7 @@ comment on
 column CARGO.CARGO_COD is 'Código de identificação do cargo';
 
 comment on
-column CARGO.CARGO_DESC is 'Descrição da função';
+column CARGO.CARGO_DESCRICAO is 'Descrição da função';
 
 comment on
 column CARGO.CARGO_SALARIO is 'Salário do funcionário';
