@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>📦 ScrapHelp – Sistema de Assistência Técnica</title>
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; max-width: 1000px; margin: auto;">
 
@@ -57,7 +56,7 @@
 
   <div name="mr-projeto" align="center">
   <h2>Modelo Relacional do Projeto</h2>
-  <img src="https://raw.githubusercontent.com/EduardoRadin/ScrapHelper/refs/heads/main/Docs/Imagens/MER_ScrapHelper.png?token=GHSAT0AAAAAADGB3DNGP5HD25GZQRKPKYIY2DDHWDQ" height="600px" width="800px">
+  <img src="https://github.com/EduardoRadin/ScrapHelper/blob/main/Docs/Imagens/MER_ScrapHelper.png?raw=true" height="600px" width="800px">
 </div>
 
   <br>
