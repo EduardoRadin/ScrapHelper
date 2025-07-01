@@ -156,6 +156,11 @@
         <td>Matheus Henrique</td>
         <td><a href="https://github.com/Matheus-HDS" target="_blank">github.com/Matheus-HDS</a></td>
       </tr>
+      <tr>
+        <td><img src="https://avatars.githubusercontent.com/u/205243776?v=4" width="60" height="60"></td>
+        <td>Eric Camini</td>
+        <td><a href="https://github.com/eric-camini482" target="_blank">github.com/Matheus-HDS</a></td>
+      </tr>
     </table>
   </div>
 
