@@ -17,7 +17,7 @@ Desenhado para simplificar a rotina de **técnicos** 👨‍🔧 e **administrad
 ---
 
 ## 🗂️ Modelo de Dados (ER)  
-📷 Imagem do modelo ER disponível em: [Modelo Entidade Relacional](Docs/ModeloER.png)
+📷 Imagem do modelo ER disponível em: [Modelo Entidade Relacional](Docs/MER_ScrapHelper.png)
 
 ---
 
