@@ -37,11 +37,11 @@
     <h2>Quais foram as ferramentas utilizadas?</h2>
     <ol>
       <li>
-        <h3><img src="https://yt3.googleusercontent.com/ytc/AIdro_kHqky8BHNA0nqO1BCUw7BncgTxQcChRBj_goko3rn3Aw=s900-c-k-c0x00ffffff-no-rj" width="22" style="vertical-align: middle; margin-right: 8px;"> <strong>Visual Paradigm</strong></h3>
+        <h3><img src="https://media.imgcdn.org/repo/2024/02/visual-paradigm-dev-tool/65c09c6c6d843-visual-paradigm-dev-tool-Icon.webp" width="22" style="vertical-align: middle; margin-right: 8px;"> <strong>Visual Paradigm</strong></h3>
         <p>Utilizada para modelagem das tabelas do banco de dados (Modelo Entidade Relacionamento - ER).</p>
       </li>
       <li>
-        <h3><img src="https://img.freepik.com/premium-vector/backend-icon_933463-6277.jpg" width="22" style="vertical-align: middle; margin-right: 8px;"> <strong>Back-end Java</strong></h3>
+        <h3><img src="https://cdn-icons-png.flaticon.com/512/5432/5432506.png" width="22" style="vertical-align: middle; margin-right: 8px;"> <strong>Back-end Java</strong></h3>
         <p>Responsável pela lógica de negócios do sistema e comunicação com o banco de dados.</p>
       </li>
       <li>
