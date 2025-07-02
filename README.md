@@ -40,7 +40,7 @@
         <p>Utilizada para modelagem das tabelas do banco de dados (Modelo Entidade Relacionamento - ER).</p>
       </li>
       <li>
-        <h3><img src="https://cdn-icons-png.flaticon.com/512/5432/5432506.png" width="22" style="vertical-align: middle; margin-right: 8px;"> <strong>Back-end Java</strong></h3>
+        <h3><img src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000" width="22" style="vertical-align: middle; margin-right: 8px;"> <strong>Back-end Java</strong></h3>
         <p>Responsável pela lógica de negócios do sistema e comunicação com o banco de dados.</p>
       </li>
       <li>
