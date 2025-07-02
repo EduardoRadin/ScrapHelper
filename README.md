@@ -110,7 +110,9 @@
     <tr><td>OS_ORCAMENTO</td><td>numeric(8, 2)</td><td></td><td>No</td><td>Orçamento da ordem de serviço</td></tr>
     <tr><td>OS_SERVICO_REALIZADO</td><td>varchar(200)</td><td></td><td>No</td><td>Serviços realizados no equipamento</td></tr>
   </table>
-
+<p>
+  <a href="https://github.com/EduardoRadin/ScrapHelper/blob/main/Docs/DicionarioDeDados.md" target="_blank">Veja aqui o restante do <b>Dicionário de Dados</b>b></a>
+</p>
 </div>
 
   <div name="consultas">
@@ -128,6 +130,129 @@
     </ol>
   </div>
 
+   <div>
+        <h1>
+            🚀 Guia de Instalação e Uso do ScrapHelp
+        </h1>
+
+        <section>
+            <h2>
+                1. Baixando o Programa
+            </h2>
+            <p>
+                Para começar, você precisará obter o código-fonte do projeto. Você pode clonar o repositório Git para a sua máquina local utilizando o comando abaixo no seu terminal:
+            </p>
+            <div>
+                <code>git clone https://github.com/EduardoRadin/ScrapHelper.git</code>
+            </div>
+            <p>
+                Após a clonagem, navegue até o diretório do projeto:
+            </p>
+            <div>
+                <code>cd ScrapHelper</code>
+            </div>
+        </section>
+
+        <section>
+            <h2>
+                2. Pré-requisitos
+            </h2>
+            <p>
+                Certifique-se de ter os seguintes softwares instalados em sua máquina:
+            </p>
+            <ul>
+                <li>
+                    <span>Java Development Kit (JDK):</span> Versão 17 ou superior.
+                    <a href="https://www.oracle.com/java/technologies/downloads/" target="_blank">Baixar JDK</a>
+                </li>
+                <li>
+                    <span>PostgreSQL:</span> Banco de dados PostgreSQL instalado e em execução (versão 13 ou superior recomendada).
+                    <a href="https://www.postgresql.org/download/" target="_blank">Baixar PostgreSQL</a>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                3. Configuração do Banco de Dados
+            </h2>
+            <ol>
+                <li>
+                    <span>Crie o Banco de Dados:</span>
+                    <p>Abra seu cliente PostgreSQL (ex: DBeaver, pgAdmin) e crie um novo banco de dados com o nome <code>ScrapHelper</code>.</p>
+                    <div>
+                        <code>CREATE DATABASE "ScrapHelper";</code>
+                    </div>
+                </li>
+                <li>
+                    <span>Configure as Credenciais de Conexão:</span>
+                    <p>No arquivo <code>src/main/java/db/Conexao.java</code>, atualize as variáveis <code>USUARIO</code> e <code>SENHA</code> com as credenciais do seu usuário PostgreSQL:</p>
+                    <div>
+                        <pre><code>private static final String USUARIO = "seu_usuario_postgres";
+private static final String SENHA = "sua_senha_postgres";</code></pre>
+                    </div>
+                </li>
+                <li>
+                    <span>Popule o Esquema do Banco de Dados:</span>
+                    <p>Execute o script SQL <code>CriacaoDB.sql</code> no banco de dados <code>ScrapHelper</code>. Este script criará todas as tabelas e definirá as chaves primárias e estrangeiras.</p>
+                    <p>Você pode fazer isso abrindo o arquivo <code>CriacaoDB.sql</code> no seu cliente PostgreSQL e executando-o.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>
+                4. Execução da Aplicação
+            </h2>
+            <ol>
+                <li>
+                    <span>Compile o Projeto:</span>
+                    <p>Navegue até o diretório raiz do projeto no seu terminal e compile o código Java:</p>
+                    <div>
+                        <code>javac src/main/java/**/*.java -d out</code>
+                    </div>
+                </li>
+                <li>
+                    <span>Execute a Aplicação:</span>
+                    <p>Após a compilação, você pode executar a aplicação principal:</p>
+                    <div>
+                        <code>java -cp out main.Main</code>
+                    </div>
+                    <p>O sistema será iniciado no console, apresentando um menu de opções para interação.</p>
+                </li>
+            </ol>
+        </section>
+        <section>
+            <h2>
+                5. Como Utilizar o Sistema
+            </h2>
+            <p>
+                Ao iniciar a aplicação, você verá um menu interativo no console. Para usar o sistema eficientemente:
+            </p>
+            <ul>
+                <li>
+                    <span>Ordem de Cadastro Recomendada:</span> Para evitar erros de chave estrangeira, é altamente recomendado seguir uma ordem lógica de cadastro:
+                    <ul>
+                        <li>Primeiro: <code>Estado</code> &rarr; <code>Município</code> &rarr; <code>CEP</code></li>
+                        <li>Depois: <code>Cargo</code> &rarr; <code>Funcionário</code> &rarr; <code>Pessoa</code></li>
+                        <li>Então: <code>Tipo de Endereço</code></li>
+                        <li>Por fim: <code>Endereços de Funcionário/Pessoa</code>, <code>Equipamento</code>, <code>Peça</code>, <code>Ordem de Serviço</code> e <code>Peça Utilizada em OS</code>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <span>Siga as Instruções:</span> O menu guiará você pelas opções de adicionar diferentes entidades ao sistema.
+                </li>
+                <li>
+                    <span>Saída do Sistema:</span> Digite <code>sair</code> a qualquer momento no menu principal para encerrar a aplicação.
+                </li>
+            </ul>
+        </section>
+
+        <p>
+            Este guia foi criado para facilitar a sua experiência com o ScrapHelp. Em caso de dúvidas, consulte a documentação completa no repositório.
+        </p>
+    </div>
+    
   <div name="criadores">
     <h2>Criadores (Perfis do GitHub)</h2>
     <table>
