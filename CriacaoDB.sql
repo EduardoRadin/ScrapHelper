@@ -1,327 +1,97 @@
-create table CARGO (CARGO_COD SERIAL not null,
-CARGO_DESCRICAO varchar(50) not null,
-CARGO_SALARIO numeric(8, 2) not null,
-primary key (CARGO_COD));
-
-comment on
-column CARGO.CARGO_COD is 'Código de identificação do cargo';
-
-comment on
-column CARGO.CARGO_DESCRICAO is 'Descrição da função';
-
-comment on
-column CARGO.CARGO_SALARIO is 'Salário do funcionário';
-
-create table CEP (CEP_COD text not null,
-COD_MUN int4 not null,
-primary key (CEP_COD));
-
-comment on
-column CEP.CEP_COD is 'Código do CEP';
-
-comment on
-column CEP.COD_MUN is 'Código do municipio';
-
-create table ENDERECO_FUN (END_FUN_ID SERIAL not null,
-COD_FUNCIONARIO int4 not null,
-COD_TIPO_ENDERCO int4 not null,
-COD_CEP text not null,
-END_FUN_BAIRRO varchar(50) not null,
-END_FUN_RUA varchar(50) not null,
-END_FUN_NUMERO numeric(6, 0) not null,
-END_FUN_TELEFONE varchar(9),
-END_FUN_CELULAR numeric(12, 0) not null,
-END_FUN_EMAIL varchar(50) not null,
-primary key (END_FUN_ID));
-
-comment on
-column ENDERECO_FUN.END_FUN_ID is 'ID de identificação do endereço do funcionário';
-
-comment on
-column ENDERECO_FUN.COD_FUNCIONARIO is 'Código do funcionário';
-
-comment on
-column ENDERECO_FUN.COD_TIPO_ENDERCO is 'Tipo do endereço do funcionário';
-
-comment on
-column ENDERECO_FUN.COD_CEP is 'CEP do funcionário';
-
-comment on
-column ENDERECO_FUN.END_FUN_BAIRRO is 'Bairro onde o funcionário mora';
-
-comment on
-column ENDERECO_FUN.END_FUN_RUA is 'Rua onde o funcionário mora';
-
-comment on
-column ENDERECO_FUN.END_FUN_NUMERO is 'Número da moradia do funcionário';
-
-comment on
-column ENDERECO_FUN.END_FUN_TELEFONE is 'Telefone do funcionário';
-
-comment on
-column ENDERECO_FUN.END_FUN_CELULAR is 'Celular do funcionário';
-
-comment on
-column ENDERECO_FUN.END_FUN_EMAIL is 'Email do funcionário';
-
-create table ENDERECO_PES (END_PES_ID SERIAL not null,
-COD_PESSOA int4 not null,
-COD_TIPO_ENDERECO int4 not null,
-COD_CEP text not null,
-END_PES_BAIRRO varchar(50) not null,
-END_PES_RUA varchar(50) not null,
-END_PES_NUMERO numeric(6, 0) not null,
-END_PES_TELEFONE varchar(9),
-END_PES_CELULAR numeric(12, 0) not null,
-END_PES_EMAIL varchar(50) not null,
-primary key (END_PES_ID));
-
-comment on
-column ENDERECO_PES.END_PES_ID is 'ID de identificação do endereço da pessoa.';
-
-comment on
-column ENDERECO_PES.COD_PESSOA is 'Código da pessoa';
-
-comment on
-column ENDERECO_PES.COD_TIPO_ENDERECO is 'Tipo do endereço da pessoa';
-
-comment on
-column ENDERECO_PES.COD_CEP is 'CEP da pessoa';
-
-comment on
-column ENDERECO_PES.END_PES_BAIRRO is 'Bairro onde a pessoa mora';
-
-comment on
-column ENDERECO_PES.END_PES_RUA is 'Rua onde a pessoa mora';
-
-comment on
-column ENDERECO_PES.END_PES_NUMERO is 'Número da moradia da pessoa';
-
-comment on
-column ENDERECO_PES.END_PES_TELEFONE is 'Telefone da pessoa';
-
-comment on
-column ENDERECO_PES.END_PES_CELULAR is 'Celular da pessoa';
-
-comment on
-column ENDERECO_PES.END_PES_EMAIL is 'Email da pessoa';
-
-create table EQUIPAMENTO (EQP_ID SERIAL not null,
-COD_PESSOA int4 not null,
-EQP_TIPO varchar(25) not null,
-EQP_MARCA varchar(25) not null,
-EQP_MODELO varchar(50) not null,
-EQP_NUM_SERIE numeric(30, 0) not null unique,
-EQP_ESTADO_ENTRADA varchar(50) not null,
-primary key (EQP_ID));
-
-comment on
-column EQUIPAMENTO.EQP_TIPO is 'Tipo do equipamento';
-
-comment on
-column EQUIPAMENTO.EQP_MARCA is 'Marca do equipamento';
-
-comment on
-column EQUIPAMENTO.EQP_MODELO is 'Modelo do equipamento';
-
-comment on
-column EQUIPAMENTO.EQP_NUM_SERIE is 'Número do série do equipamento';
-
-comment on
-column EQUIPAMENTO.EQP_ESTADO_ENTRADA is 'Descrição do equipamento ao chegar na assistência técnica';
-
-create table ESTADO (ESTADO_COD SERIAL not null,
-ESTADO_SIGLA varchar(2) not null,
-ESTADO_NOME varchar(20) not null,
-primary key (ESTADO_COD));
-
-comment on
-column ESTADO.ESTADO_SIGLA is 'Sigla do estado';
-
-comment on
-column ESTADO.ESTADO_NOME is 'Nome do estado';
-
-create table FUNCIONARIO (FUN_COD SERIAL not null,
-COD_CARGO int4 not null,
-FUN_NOME varchar(50) not null,
-FUN_CPF numeric(11, 0) not null unique,
-FUN_RG numeric(9, 0) not null unique,
-FUN_DATA_NAS date not null,
-FUN_GEN char(1) check(FUN_GEN in ('M', 'F')), primary key (FUN_COD));
-
-comment on
-column FUNCIONARIO.FUN_NOME is 'Nome do funcionário';
-
-comment on
-column FUNCIONARIO.FUN_CPF is 'CPF do funcionário';
-
-comment on
-column FUNCIONARIO.FUN_RG is 'RG do funcionário';
-
-comment on
-column FUNCIONARIO.FUN_DATA_NAS is 'Data de nascimento do funcionário';
-
-comment on
-column FUNCIONARIO.FUN_GEN is 'Gênero do funcionário (M ou F)';
-
-create table MUNICIPIO (MUN_COD SERIAL not null,
-COD_ESTADO int4 not null,
-MUN_NOME varchar(50) not null,
-primary key (MUN_COD));
-
-comment on
-column MUNICIPIO.COD_ESTADO is 'Código de identificação do estado';
-
-comment on
-column MUNICIPIO.MUN_NOME is 'Nome do municipio';
-
-create table ORDEM_SERVICO (OS_COD SERIAL not null,
-COD_EQP int4 not null,
-COD_FUN int4 not null,
-OS_DATA_ENTRADA date not null,
-OS_DATA_CONCLUSAO date not null,
-OS_EQP_STATUS varchar(50) not null,
-OS_EQP_PROBLEMA varchar(50) not null,
-OS_ORCAMENTO numeric(8, 2) not null,
-OS_SERVICO_REALIZADO varchar(200) not null,
-primary key (OS_COD));
-
-comment on
-column ORDEM_SERVICO.OS_COD is 'Código de identificação da ordem de serviço';
-
-comment on
-column ORDEM_SERVICO.COD_EQP is 'Código do equipamento';
-
-comment on
-column ORDEM_SERVICO.COD_FUN is 'Código do funcionário responsável pela ordem de serviço';
-
-comment on
-column ORDEM_SERVICO.OS_DATA_ENTRADA is 'Data de entrada da ordem de serviço';
-
-comment on
-column ORDEM_SERVICO.OS_DATA_CONCLUSAO is 'Data de conclusão da ordem de serviço';
-
-comment on
-column ORDEM_SERVICO.OS_EQP_STATUS is 'Estado do equipamento';
-
-comment on
-column ORDEM_SERVICO.OS_EQP_PROBLEMA is 'Problema do equipamento';
-
-comment on
-column ORDEM_SERVICO.OS_ORCAMENTO is 'Orçamento para a ordem de serviço';
-
-comment on
-column ORDEM_SERVICO.OS_SERVICO_REALIZADO is 'Descrição dos serviços que foram realizados no equipamento';
-
-create table OS_PECA_UTILIZADA (PECA_ID int4 not null,
-COD_OS int4 not null,
-QUANTIDADE int4 not null);
-
-comment on
-column OS_PECA_UTILIZADA.QUANTIDADE is 'Quantidade de peças utilizadas';
-
-create table PECA (PECA_ID SERIAL not null,
-PECA_NOME varchar(30) not null,
-PECA_DESCRICAO varchar(100) not null,
-PECA_PRECO numeric(8, 2) not null,
-primary key (PECA_ID));
-
-comment on
-column PECA.PECA_NOME is 'Nome da peça';
-
-comment on
-column PECA.PECA_DESCRICAO is 'Descrição da peça';
-
-comment on
-column PECA.PECA_PRECO is 'Preço da peça';
-
-create table PERMISSAO (PER_COD SERIAL not null,
-PER_DESCRICAO char(1) not null check(PER_DESCRICAO in ('A', 'T')), primary key (PER_COD));
-
-comment on
-column PERMISSAO.PER_COD is 'Código do nível de permissão';
-
-comment on
-column PERMISSAO.PER_DESCRICAO is 'A - Administrador
+CREATE TABLE CARGO (CARGO_COD SERIAL NOT NULL, CARGO_DESCRICAO varchar(50) NOT NULL, CARGO_SALARIO numeric(8, 2) NOT NULL, PRIMARY KEY (CARGO_COD));
+COMMENT ON COLUMN CARGO.CARGO_COD IS 'Código de identificação do cargo';
+COMMENT ON COLUMN CARGO.CARGO_DESCRICAO IS 'Descrição da função';
+COMMENT ON COLUMN CARGO.CARGO_SALARIO IS 'Salário do funcionário';
+CREATE TABLE CEP (CEP_COD varchar(8) NOT NULL, COD_MUN int4 NOT NULL, PRIMARY KEY (CEP_COD));
+COMMENT ON COLUMN CEP.CEP_COD IS 'Código do CEP';
+COMMENT ON COLUMN CEP.COD_MUN IS 'Código do municipio';
+CREATE TABLE ENDERECO_FUN (END_FUN_ID SERIAL NOT NULL, COD_FUNCIONARIO int4 NOT NULL, COD_TIPO_ENDERCO int4 NOT NULL, COD_CEP varchar(8) NOT NULL, END_FUN_BAIRRO varchar(50) NOT NULL, END_FUN_RUA varchar(50) NOT NULL, END_FUN_NUMERO numeric(6, 0) NOT NULL, END_FUN_TELEFONE varchar(10), END_FUN_CELULAR varchar(11) NOT NULL, END_FUN_EMAIL varchar(50) NOT NULL, PRIMARY KEY (END_FUN_ID));
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_ID IS 'ID de identificação do endereço do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.COD_FUNCIONARIO IS 'Código do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.COD_TIPO_ENDERCO IS 'Tipo do endereço do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.COD_CEP IS 'CEP do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_BAIRRO IS 'Bairro onde o funcionário mora';
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_RUA IS 'Rua onde o funcionário mora';
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_NUMERO IS 'Número da moradia do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_TELEFONE IS 'Telefone do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_CELULAR IS 'Celular do funcionário';
+COMMENT ON COLUMN ENDERECO_FUN.END_FUN_EMAIL IS 'Email do funcionário';
+CREATE TABLE ENDERECO_PES (END_PES_ID SERIAL NOT NULL, COD_PESSOA int4 NOT NULL, COD_TIPO_ENDERECO int4 NOT NULL, COD_CEP varchar(8) NOT NULL, END_PES_BAIRRO varchar(50) NOT NULL, END_PES_RUA varchar(50) NOT NULL, END_PES_NUMERO numeric(6, 0) NOT NULL, END_PES_TELEFONE varchar(10), END_PES_CELULAR varchar(11) NOT NULL, END_PES_EMAIL varchar(50) NOT NULL, PRIMARY KEY (END_PES_ID));
+COMMENT ON COLUMN ENDERECO_PES.END_PES_ID IS 'ID de identificação do endereço da pessoa.';
+COMMENT ON COLUMN ENDERECO_PES.COD_PESSOA IS 'Código da pessoa';
+COMMENT ON COLUMN ENDERECO_PES.COD_TIPO_ENDERECO IS 'Tipo do endereço da pessoa';
+COMMENT ON COLUMN ENDERECO_PES.COD_CEP IS 'CEP da pessoa';
+COMMENT ON COLUMN ENDERECO_PES.END_PES_BAIRRO IS 'Bairro onde a pessoa mora';
+COMMENT ON COLUMN ENDERECO_PES.END_PES_RUA IS 'Rua onde a pessoa mora';
+COMMENT ON COLUMN ENDERECO_PES.END_PES_NUMERO IS 'Número da moradia da pessoa';
+COMMENT ON COLUMN ENDERECO_PES.END_PES_TELEFONE IS 'Telefone da pessoa';
+COMMENT ON COLUMN ENDERECO_PES.END_PES_CELULAR IS 'Celular da pessoa';
+COMMENT ON COLUMN ENDERECO_PES.END_PES_EMAIL IS 'Email da pessoa';
+CREATE TABLE EQUIPAMENTO (EQP_ID SERIAL NOT NULL, COD_PESSOA int4 NOT NULL, EQP_TIPO varchar(25) NOT NULL, EQP_MARCA varchar(25) NOT NULL, EQP_MODELO varchar(50) NOT NULL, EQP_NUM_SERIE numeric(30, 0) NOT NULL UNIQUE, EQP_ESTADO_ENTRADA varchar(50) NOT NULL, PRIMARY KEY (EQP_ID));
+COMMENT ON COLUMN EQUIPAMENTO.EQP_TIPO IS 'Tipo do equipamento';
+COMMENT ON COLUMN EQUIPAMENTO.EQP_MARCA IS 'Marca do equipamento';
+COMMENT ON COLUMN EQUIPAMENTO.EQP_MODELO IS 'Modelo do equipamento';
+COMMENT ON COLUMN EQUIPAMENTO.EQP_NUM_SERIE IS 'Número do série do equipamento';
+COMMENT ON COLUMN EQUIPAMENTO.EQP_ESTADO_ENTRADA IS 'Descrição do equipamento ao chegar na assistência técnica';
+CREATE TABLE ESTADO (ESTADO_COD SERIAL NOT NULL, ESTADO_SIGLA varchar(2) NOT NULL, ESTADO_NOME varchar(20) NOT NULL, PRIMARY KEY (ESTADO_COD));
+COMMENT ON COLUMN ESTADO.ESTADO_SIGLA IS 'Sigla do estado';
+COMMENT ON COLUMN ESTADO.ESTADO_NOME IS 'Nome do estado';
+CREATE TABLE FUNCIONARIO (FUN_COD SERIAL NOT NULL, COD_CARGO int4 NOT NULL, FUN_NOME varchar(50) NOT NULL, FUN_CPF numeric(11, 0) NOT NULL UNIQUE, FUN_RG numeric(9, 0) NOT NULL UNIQUE, FUN_DATA_NAS date NOT NULL, FUN_GEN char(1) CHECK(FUN_GEN in ('M','F')), PRIMARY KEY (FUN_COD));
+COMMENT ON COLUMN FUNCIONARIO.FUN_NOME IS 'Nome do funcionário';
+COMMENT ON COLUMN FUNCIONARIO.FUN_CPF IS 'CPF do funcionário';
+COMMENT ON COLUMN FUNCIONARIO.FUN_RG IS 'RG do funcionário';
+COMMENT ON COLUMN FUNCIONARIO.FUN_DATA_NAS IS 'Data de nascimento do funcionário';
+COMMENT ON COLUMN FUNCIONARIO.FUN_GEN IS 'Gênero do funcionário (M ou F)';
+CREATE TABLE MUNICIPIO (MUN_COD SERIAL NOT NULL, COD_ESTADO int4 NOT NULL, MUN_NOME varchar(50) NOT NULL, PRIMARY KEY (MUN_COD));
+COMMENT ON COLUMN MUNICIPIO.COD_ESTADO IS 'Código de identificação do estado';
+COMMENT ON COLUMN MUNICIPIO.MUN_NOME IS 'Nome do municipio';
+CREATE TABLE ORDEM_SERVICO (OS_COD SERIAL NOT NULL, COD_EQP int4 NOT NULL, COD_FUN int4 NOT NULL, OS_DATA_ENTRADA date NOT NULL, OS_DATA_CONCLUSAO date NOT NULL, OS_EQP_STATUS varchar(50) NOT NULL, OS_EQP_PROBLEMA varchar(50) NOT NULL, OS_ORCAMENTO numeric(8, 2) NOT NULL, OS_SERVICO_REALIZADO varchar(200) NOT NULL, PRIMARY KEY (OS_COD));
+COMMENT ON COLUMN ORDEM_SERVICO.OS_COD IS 'Código de identificação da ordem de serviço';
+COMMENT ON COLUMN ORDEM_SERVICO.COD_EQP IS 'Código do equipamento';
+COMMENT ON COLUMN ORDEM_SERVICO.COD_FUN IS 'Código do funcionário responsável pela ordem de serviço';
+COMMENT ON COLUMN ORDEM_SERVICO.OS_DATA_ENTRADA IS 'Data de entrada da ordem de serviço';
+COMMENT ON COLUMN ORDEM_SERVICO.OS_DATA_CONCLUSAO IS 'Data de conclusão da ordem de serviço';
+COMMENT ON COLUMN ORDEM_SERVICO.OS_EQP_STATUS IS 'Estado do equipamento';
+COMMENT ON COLUMN ORDEM_SERVICO.OS_EQP_PROBLEMA IS 'Problema do equipamento';
+COMMENT ON COLUMN ORDEM_SERVICO.OS_ORCAMENTO IS 'Orçamento para a ordem de serviço';
+COMMENT ON COLUMN ORDEM_SERVICO.OS_SERVICO_REALIZADO IS 'Descrição dos serviços que foram realizados no equipamento';
+CREATE TABLE OS_PECA_UTILIZADA (PECA_ID int4 NOT NULL, COD_OS int4 NOT NULL, QUANTIDADE int4 NOT NULL);
+COMMENT ON COLUMN OS_PECA_UTILIZADA.QUANTIDADE IS 'Quantidade de peças utilizadas';
+CREATE TABLE PECA (PECA_ID SERIAL NOT NULL, PECA_NOME varchar(30) NOT NULL, PECA_DESCRICAO varchar(100) NOT NULL, PECA_PRECO numeric(8, 2) NOT NULL, PRIMARY KEY (PECA_ID));
+COMMENT ON COLUMN PECA.PECA_NOME IS 'Nome da peça';
+COMMENT ON COLUMN PECA.PECA_DESCRICAO IS 'Descrição da peça';
+COMMENT ON COLUMN PECA.PECA_PRECO IS 'Preço da peça';
+CREATE TABLE PERMISSAO (PER_COD SERIAL NOT NULL, PER_DESCRICAO char(1) NOT NULL CHECK(PER_DESCRICAO in ('A', 'T')), PRIMARY KEY (PER_COD));
+COMMENT ON COLUMN PERMISSAO.PER_COD IS 'Código do nível de permissão';
+COMMENT ON COLUMN PERMISSAO.PER_DESCRICAO IS 'A - Administrador
 T - Técnico';
-
-create table PESSOA (PES_COD SERIAL not null,
-PES_NOME varchar(50) not null,
-PES_TIPO char(1) not null check(PES_TIPO in ('F', 'J')), PES_CPF_CNPJ numeric(14, 0) not null unique,
-PES_GEN int4,
-PES_DATA_NAS date not null,
-primary key (PES_COD));
-
-comment on
-table PESSOA is 'Cadastro de clientes e funcionários';
-
-comment on
-column PESSOA.PES_COD is 'ID de identificação da Pessoa';
-
-comment on
-column PESSOA.PES_NOME is 'Nome da pessoa.';
-
-comment on
-column PESSOA.PES_TIPO is 'Tipo da pessoa (F - Física ou J - Jurídica)';
-
-comment on
-column PESSOA.PES_CPF_CNPJ is 'CPF ou CNPJ da pessoa.';
-
-comment on
-column PESSOA.PES_GEN is 'Gênero da pessoa (M ou F)';
-
-comment on
-column PESSOA.PES_DATA_NAS is 'Data de nascimento da pessoa.';
-
-create table TIPO_ENDERECO (TIP_END_COD SERIAL not null,
-TIP_END_DESCRICAO varchar(50) not null,
-primary key (TIP_END_COD));
-
-comment on
-column TIPO_ENDERECO.TIP_END_COD is 'ID de identificação do tipo de endereço';
-
-comment on
-column TIPO_ENDERECO.TIP_END_DESCRICAO is 'Descrição do tipo de endereço';
-
-create table USUARIO (COD_FUNCIONARIO int4 not null,
-USU_PERMISSAO int4 not null,
-USU_LOGIN varchar(50) not null unique,
-USU_SENHA varchar(50) not null);
-
-comment on
-column USUARIO.USU_LOGIN is 'Login do funcionário';
-
-comment on
-column USUARIO.USU_SENHA is 'Senha do usuário';
-
-alter table USUARIO add constraint FKUSUARIO88029 foreign key (USU_PERMISSAO) references PERMISSAO (PER_COD);
-
-alter table USUARIO add constraint FKUSUARIO728678 foreign key (COD_FUNCIONARIO) references FUNCIONARIO (FUN_COD);
-
-alter table OS_PECA_UTILIZADA add constraint FKOS_PECA_UT673306 foreign key (COD_OS) references ORDEM_SERVICO (OS_COD);
-
-alter table OS_PECA_UTILIZADA add constraint FKOS_PECA_UT432333 foreign key (PECA_ID) references PECA (PECA_ID);
-
-alter table ORDEM_SERVICO add constraint FKORDEM_SERV169302 foreign key (COD_FUN) references FUNCIONARIO (FUN_COD);
-
-alter table ORDEM_SERVICO add constraint FKORDEM_SERV672429 foreign key (COD_EQP) references EQUIPAMENTO (EQP_ID);
-
-alter table EQUIPAMENTO add constraint FKEQUIPAMENT378982 foreign key (COD_PESSOA) references PESSOA (PES_COD);
-
-alter table ENDERECO_PES add constraint FKENDERECO_P945738 foreign key (COD_CEP) references CEP (CEP_COD);
-
-alter table ENDERECO_FUN add constraint FKENDERECO_F954857 foreign key (COD_CEP) references CEP (CEP_COD);
-
-alter table CEP add constraint FKCEP721326 foreign key (COD_MUN) references MUNICIPIO (MUN_COD);
-
-alter table MUNICIPIO add constraint FKMUNICIPIO739234 foreign key (COD_ESTADO) references ESTADO (ESTADO_COD);
-
-alter table FUNCIONARIO add constraint FKFUNCIONARI908311 foreign key (COD_CARGO) references CARGO (CARGO_COD);
-
-alter table ENDERECO_FUN add constraint FKENDERECO_F539018 foreign key (COD_FUNCIONARIO) references FUNCIONARIO (FUN_COD);
-
-alter table ENDERECO_PES add constraint FKENDERECO_P343901 foreign key (COD_TIPO_ENDERECO) references TIPO_ENDERECO (TIP_END_COD);
-
-alter table ENDERECO_FUN add constraint FKENDERECO_F48044 foreign key (COD_TIPO_ENDERCO) references TIPO_ENDERECO (TIP_END_COD);
-
-alter table ENDERECO_PES add constraint FKENDERECO_P26649 foreign key (COD_PESSOA) references PESSOA (PES_COD);
+CREATE TABLE PESSOA (PES_COD SERIAL NOT NULL, PES_NOME varchar(50) NOT NULL, PES_TIPO char(1) NOT NULL CHECK(PES_TIPO in ('F', 'J')), PES_CPF_CNPJ varchar(14) NOT NULL UNIQUE, PES_GEN char(1) CHECK(PES_GEN in ('M','F')), PES_DATA_NAS date, PRIMARY KEY (PES_COD));
+COMMENT ON TABLE PESSOA IS 'Cadastro de clientes e funcionários';
+COMMENT ON COLUMN PESSOA.PES_COD IS 'ID de identificação da Pessoa';
+COMMENT ON COLUMN PESSOA.PES_NOME IS 'Nome da pessoa.';
+COMMENT ON COLUMN PESSOA.PES_TIPO IS 'Tipo da pessoa (F - Física ou J - Jurídica)';
+COMMENT ON COLUMN PESSOA.PES_CPF_CNPJ IS 'CPF ou CNPJ da pessoa.';
+COMMENT ON COLUMN PESSOA.PES_GEN IS 'Gênero da pessoa (M ou F)';
+COMMENT ON COLUMN PESSOA.PES_DATA_NAS IS 'Data de nascimento da pessoa.';
+CREATE TABLE TIPO_ENDERECO (TIP_END_COD SERIAL NOT NULL, TIP_END_DESCRICAO varchar(50) NOT NULL, PRIMARY KEY (TIP_END_COD));
+COMMENT ON COLUMN TIPO_ENDERECO.TIP_END_COD IS 'ID de identificação do tipo de endereço';
+COMMENT ON COLUMN TIPO_ENDERECO.TIP_END_DESCRICAO IS 'Descrição do tipo de endereço';
+CREATE TABLE USUARIO (COD_FUNCIONARIO int4 NOT NULL, USU_PERMISSAO int4 NOT NULL, USU_LOGIN varchar(50) NOT NULL UNIQUE, USU_SENHA varchar(50) NOT NULL);
+COMMENT ON COLUMN USUARIO.USU_LOGIN IS 'Login do funcionário';
+COMMENT ON COLUMN USUARIO.USU_SENHA IS 'Senha do usuário';
+ALTER TABLE USUARIO ADD CONSTRAINT FKUSUARIO88029 FOREIGN KEY (USU_PERMISSAO) REFERENCES PERMISSAO (PER_COD);
+ALTER TABLE USUARIO ADD CONSTRAINT FKUSUARIO728678 FOREIGN KEY (COD_FUNCIONARIO) REFERENCES FUNCIONARIO (FUN_COD);
+ALTER TABLE OS_PECA_UTILIZADA ADD CONSTRAINT FKOS_PECA_UT673306 FOREIGN KEY (COD_OS) REFERENCES ORDEM_SERVICO (OS_COD);
+ALTER TABLE OS_PECA_UTILIZADA ADD CONSTRAINT FKOS_PECA_UT432333 FOREIGN KEY (PECA_ID) REFERENCES PECA (PECA_ID);
+ALTER TABLE ORDEM_SERVICO ADD CONSTRAINT FKORDEM_SERV169302 FOREIGN KEY (COD_FUN) REFERENCES FUNCIONARIO (FUN_COD);
+ALTER TABLE ORDEM_SERVICO ADD CONSTRAINT FKORDEM_SERV364794 FOREIGN KEY (COD_EQP) REFERENCES EQUIPAMENTO (EQP_ID);
+ALTER TABLE EQUIPAMENTO ADD CONSTRAINT FKEQUIPAMENT71347 FOREIGN KEY (COD_PESSOA) REFERENCES PESSOA (PES_COD);
+ALTER TABLE ENDERECO_PES ADD CONSTRAINT FKENDERECO_P945738 FOREIGN KEY (COD_CEP) REFERENCES CEP (CEP_COD);
+ALTER TABLE ENDERECO_FUN ADD CONSTRAINT FKENDERECO_F954857 FOREIGN KEY (COD_CEP) REFERENCES CEP (CEP_COD);
+ALTER TABLE CEP ADD CONSTRAINT FKCEP721326 FOREIGN KEY (COD_MUN) REFERENCES MUNICIPIO (MUN_COD);
+ALTER TABLE MUNICIPIO ADD CONSTRAINT FKMUNICIPIO739234 FOREIGN KEY (COD_ESTADO) REFERENCES ESTADO (ESTADO_COD);
+ALTER TABLE FUNCIONARIO ADD CONSTRAINT FKFUNCIONARI908311 FOREIGN KEY (COD_CARGO) REFERENCES CARGO (CARGO_COD);
+ALTER TABLE ENDERECO_FUN ADD CONSTRAINT FKENDERECO_F539018 FOREIGN KEY (COD_FUNCIONARIO) REFERENCES FUNCIONARIO (FUN_COD);
+ALTER TABLE ENDERECO_PES ADD CONSTRAINT FKENDERECO_P343901 FOREIGN KEY (COD_TIPO_ENDERECO) REFERENCES TIPO_ENDERECO (TIP_END_COD);
+ALTER TABLE ENDERECO_FUN ADD CONSTRAINT FKENDERECO_F48044 FOREIGN KEY (COD_TIPO_ENDERCO) REFERENCES TIPO_ENDERECO (TIP_END_COD);
+ALTER TABLE ENDERECO_PES ADD CONSTRAINT FKENDERECO_P26649 FOREIGN KEY (COD_PESSOA) REFERENCES PESSOA (PES_COD);
