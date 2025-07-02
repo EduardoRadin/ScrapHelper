@@ -56,7 +56,7 @@
 
   <div name="mr-projeto" align="center">
   <h2>Modelo Relacional do Projeto</h2>
-  <img src="https://github.com/EduardoRadin/ScrapHelper/blob/main/Docs/Imagens/MER_ScrapHelper.png?raw=true" height="600px" width="800px">
+  <img src="https://github.com/EduardoRadin/ScrapHelper/blob/main/Docs/Images/MER_ScrapHelper.png?raw=true" height="600px" width="800px">
 </div>
 
   <br>
