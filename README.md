@@ -188,27 +188,6 @@ Ao iniciar a aplicação, você verá um menu interativo no console. Para usar o
 
 ---
 
-  <div name="consultas">
-    <h2>Exemplos de consultas no banco</h2>
-    <ol>
-      <li>
-        <h3>Relatório de Clientes Ativos</h3>
-      </li>
-      <li>
-        <h3>Relatório de Equipamentos por Cliente</h3>
-      </li>
-      <li>
-        <h3>Relatório de Ordens de Serviço Atribuídas</h3>
-      </li>
-       <li>
-        <h3>Relatório Resumido de Ordens por Técnico</h3>
-      </li>
-    </ol>
-  </div>
-
-
----
-
     
   <div name="criadores">
     <h2>Criadores (Perfis do GitHub)</h2>
