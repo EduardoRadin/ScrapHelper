@@ -8,7 +8,7 @@ public class Conexao {
     private Connection conexao;
     private static final String URL = "jdbc:postgresql://localhost:5432/ScrapHelper";
     private static final String USUARIO = "postgres";
-    private static final String SENHA = "Edu_751210";
+    private static final String SENHA = "postgres";
 
     private Conexao() throws SQLException {
         this.conexao = DriverManager.getConnection(URL, USUARIO, SENHA);
