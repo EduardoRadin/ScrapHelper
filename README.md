@@ -119,13 +119,16 @@
     <h2>Exemplos de consultas no banco</h2>
     <ol>
       <li>
-        <h3>Listar ordens de serviço com cliente, técnico e status</h3>
+        <h3>Relatório de Clientes Ativos</h3>
       </li>
       <li>
-        <h3>Peças mais utilizadas por período</h3>
+        <h3>Relatório de Equipamentos por Cliente</h3>
       </li>
       <li>
-        <h3>Clientes atendidos no mês</h3>
+        <h3>Relatório de Ordens de Serviço Atribuídas</h3>
+      </li>
+       <li>
+        <h3>Relatório Resumido de Ordens por Técnico</h3>
       </li>
     </ol>
   </div>
@@ -188,7 +191,7 @@
                     <span>Configure as Credenciais de Conexão:</span>
                     <p>No arquivo <code>src/main/java/db/Conexao.java</code>, atualize as variáveis <code>USUARIO</code> e <code>SENHA</code> com as credenciais do seu usuário PostgreSQL:</p>
                     <div>
-                        <pre><code>private static final String USUARIO = "seu_usuario_postgres";
+                        <pre><code>private static final String USUARIO = "seu_usuario_postgres"; // Ex: "postgres"
 private static final String SENHA = "sua_senha_postgres";</code></pre>
                     </div>
                 </li>
@@ -247,10 +250,6 @@ private static final String SENHA = "sua_senha_postgres";</code></pre>
                 </li>
             </ul>
         </section>
-
-        <p>
-            Este guia foi criado para facilitar a sua experiência com o ScrapHelp. Em caso de dúvidas, consulte a documentação completa no repositório.
-        </p>
     </div>
     
   <div name="criadores">
