@@ -111,7 +111,7 @@
     <tr><td>OS_SERVICO_REALIZADO</td><td>varchar(200)</td><td></td><td>No</td><td>Serviços realizados no equipamento</td></tr>
   </table>
 <p>
-  <a href="https://github.com/EduardoRadin/ScrapHelper/blob/main/Docs/DicionarioDeDados.md" target="_blank">Veja aqui o restante do <b>Dicionário de Dados</b>b></a>
+  <a href="https://github.com/EduardoRadin/ScrapHelper/blob/main/Docs/DicionarioDeDados.md" target="_blank">Veja aqui o restante do <b>Dicionário de Dados</b></a>
 </p>
 </div>
 
