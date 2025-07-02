@@ -151,7 +151,7 @@ Siga os passos abaixo para configurar e executar o projeto ScrapHelp em seu ambi
 2.  **Configure as Credenciais de Conexão:**
     No arquivo `src/main/java/db/Conexao.java`, atualize as variáveis `USUARIO` e `SENHA` com as credenciais do seu usuário PostgreSQL:
     ```java
-    private static final String USUARIO = "seu_usuario_postgres"; // Ex: "postgres"
+    private static final String USUARIO = "seu_usuario_postgres";
     private static final String SENHA = "sua_senha_postgres";
     ```
 
