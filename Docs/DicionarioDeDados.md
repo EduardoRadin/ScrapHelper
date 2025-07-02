@@ -54,14 +54,14 @@
 ## 🏙️ CEP
 | Column Name | Data Type | PK / FK | Nullable | Description          |
 |-------------|-----------|---------|----------|----------------------|
-| CEP_COD     | int4      | PK      | No       | Código do CEP        |
+| CEP_COD     | varchar(8)| PK      | No       | Código do CEP        |
 | COD_MUN     | int4      | FK      | No       | Código do município  |
 
 ## 🏘️ MUNICIPIO
 | Column Name  | Data Type   | PK / FK | Nullable | Description                        |
 |--------------|-------------|---------|----------|------------------------------------|
 | MUN_COD      | int4        | PK      | No       |                                    |
-| COD_ESTADO   | int4        | FK      | No       | Código de identificação do estado |
+| COD_ESTADO   | int4        | FK      | No       | Código de identificação do estado  |
 | MUN_NOME     | varchar(50) |         | No       | Nome do município                  |
 
 ## 🗺️ ESTADO
@@ -105,8 +105,8 @@
 | END_FUN_BAIRRO    | varchar(50)  |         | No       | Bairro                         |
 | END_FUN_RUA       | varchar(50)  |         | No       | Rua                            |
 | END_FUN_NUMERO    | numeric(6)   |         | No       | Número da moradia              |
-| END_FUN_TELEFONE  | varchar(9)   |         | Yes      | Telefone                       |
-| END_FUN_CELULAR   | numeric(12)  |         | No       | Celular                        |
+| END_FUN_TELEFONE  | varchar(10)  |         | Yes      | Telefone                       |
+| END_FUN_CELULAR   | varchar(11)  |         | No       | Celular                        |
 | END_FUN_EMAIL     | varchar(50)  |         | No       | Email                          |
 
 ## 🏡 ENDERECO_PES
@@ -119,8 +119,8 @@
 | END_PES_BAIRRO     | varchar(50)  |         | No       | Bairro                        |
 | END_PES_RUA        | varchar(50)  |         | No       | Rua                           |
 | END_PES_NUMERO     | numeric(6)   |         | No       | Número                        |
-| END_PES_TELEFONE   | varchar(9)   |         | Yes      | Telefone                      |
-| END_PES_CELULAR    | numeric(12)  |         | No       | Celular                       |
+| END_PES_TELEFONE   | varchar(11)  |         | Yes      | Telefone                      |
+| END_PES_CELULAR    | varchar(11)  |         | No       | Celular                       |
 | END_PES_EMAIL      | varchar(50)  |         | No       | Email                         |
 
 ## 🧍 PESSOA
@@ -129,6 +129,6 @@
 | PES_COD        | int4        | PK      | No       | ID de identificação da pessoa          |
 | PES_NOME       | varchar(50) |         | No       | Nome da pessoa                         |
 | PES_TIPO       | char(1)     |         | No       | Tipo da pessoa (F-Física / J-Jurídica) |
-| PES_CPF_CNPJ   | numeric(14) |         | No       | CPF ou CNPJ da pessoa                  |
+| PES_CPF_CNPJ   | varchar(14) |         | No       | CPF ou CNPJ da pessoa                  |
 | PES_GEN        | int4        |         | Yes      | Gênero da pessoa (M ou F)              |
 | PES_DATA_NAS   | date        |         | No       | Data de nascimento da pessoa           |
