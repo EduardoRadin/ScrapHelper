@@ -84,8 +84,8 @@
 | FUN_COD      | int4        | PK      | No       |                        |
 | COD_CARGO    | int4        | FK      | No       |                        |
 | FUN_NOME     | varchar(50) |         | No       | Nome do funcionário    |
-| FUN_CPF      | numeric(11) |         | No       | CPF do funcionário     |
-| FUN_RG       | numeric(9)  |         | No       | RG do funcionário      |
+| FUN_CPF      | varchar(11) |         | No       | CPF do funcionário     |
+| FUN_RG       | varchar(9)  |         | Yes      | RG do funcionário      |
 | FUN_DATA_NAS | date        |         | No       | Data de nascimento     |
 | FUN_GEN      | char(1)     |         | Yes      | Gênero (M ou F)        |
 
